@@ -5,6 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
+import java.time.LocalDate;
 
 @SpringBootApplication
 public class SecondGroupProjectApplication {
@@ -20,12 +21,13 @@ public class SecondGroupProjectApplication {
 
     @PostConstruct
     private void postConstruct() {
-        Movie protosi = new Movie(1, "Protosi", "No co tam, co tam?", "Science-fiction", "18.07.2020", "Blizzard", "Blizzard Corp.",
-                "Kerrigan, Fenix, Zagara", 2.4, 13.5);
-        Movie admin123 = new Movie(2, "AdminAdmin", "a jakie jest haslo twoje?", "western", "29.10.2020", "Klub Kosmos", "Sebix Corp.",
-                "Andrzej Poziomka, Tadeusz Litwin, Admin Admin", 2.3, 14.5);
-        movieRepository.save(protosi);
-        movieRepository.save(admin123);
+        Movie forrestGump = new Movie(1, "Forrest Gump", "Historia życia Forresta, chłopca o niskim ilorazie inteligencji z niedowładem kończyn, który staje się miliarderem i bohaterem wojny w Wietnamie.", "Dramat, Komedia", LocalDate.of(1994,6,23), "USA",
+                "Robert Zemeckis.", "Tom Hanks, Robin Wright Penn, Gary Sinise, Sally Field", 141, 13.5);
+        Movie fightClub = new Movie(2,"Podziemny krąd (Fight Club)","Dwóch mężczyzn znudzonych rutyną zakłada klub, w którym co tydzień odbywają się walki na gołe pięści.", "Dramat, Thriller, Psychologiczny", LocalDate.of(1999,9,10),"USA, Niemcy", "David Fincher","Brad Pitt, Edward Norton, Helena Bonham Carter",139,13.5);
+
+        movieRepository.save(forrestGump);
+        movieRepository.save(fightClub);
+
     }
 
 }
