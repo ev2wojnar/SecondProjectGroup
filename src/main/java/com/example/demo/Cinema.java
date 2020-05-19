@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -11,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @NoArgsConstructor
-@AllArgsConstructor
 @Setter
 @Getter
 @Entity
@@ -26,5 +24,11 @@ public class Cinema {
     @Embedded
     private CinemaHall cinemaHall;
 
-    //private Set<Movie> movies;
+    public Cinema(String name, Address address, CinemaHall cinemaHall) {
+        this.name = name;
+        this.address = address;
+        this.cinemaHall = cinemaHall;
+    }
+
+//private Set<Movie> movies;
 }
