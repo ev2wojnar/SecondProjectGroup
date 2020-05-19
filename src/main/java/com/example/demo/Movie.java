@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.time.LocalDate;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -22,10 +23,10 @@ public class Movie {
     private String title;
     private String description;
     private String type;
-    private String releaseDate;
+    private LocalDate releaseDate;
     private String production;
     private String direction;
     private String staff;
-    private double duration;
+    private int duration;
     private double ticketPrice;
 }
