@@ -20,6 +20,7 @@ public class Movie {
 
     private String title;
     private String description;
+    private MovieGenre movieGenre;
     private String type;
     private LocalDate releaseDate;
     private String production;
@@ -28,11 +29,12 @@ public class Movie {
     private int duration;
     private double ticketPrice;
 
-    public Movie(String title, String description, String type, LocalDate releaseDate,
+    public Movie(String title, String description, MovieGenre movieGenre, LocalDate releaseDate,
                  String production, String direction, String staff, int duration, double ticketPrice) {
         this.title = title;
         this.description = description;
-        this.type = type;
+        this.movieGenre = movieGenre;
+       // this.type = type;
         this.releaseDate = releaseDate;
         this.production = production;
         this.direction = direction;
