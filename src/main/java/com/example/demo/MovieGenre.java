@@ -1,6 +1,7 @@
 package com.example.demo;
 
 public enum MovieGenre {
-    Adventure, Action, Comedy, Crime, Drama, Fantasy, Historical, Horror,
-    Psychological_Thriller, Romance, Science_fiction, Thriller, Western
+    ADVENTURE, ACTION, COMEDY, CRIME, DRAMA, FANTASY, HISTORICAL, HORROR,
+    PSYCHOLOGICAL_THRILLER, ROMANCE, SCIENCE_FICTION, THRILLER, WESTERN
+
 }
