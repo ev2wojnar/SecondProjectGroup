@@ -21,7 +21,7 @@ public class Movie {
     private String title;
     private String description;
     private MovieGenre movieGenre;
-    private String type;
+   // private String type;
     private LocalDate releaseDate;
     private String production;
     private String direction;

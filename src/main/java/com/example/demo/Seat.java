@@ -1,6 +1,8 @@
 package com.example.demo;
 
+import javax.persistence.Embeddable;
 
+@Embeddable
 public class Seat {
 
     private char row;
