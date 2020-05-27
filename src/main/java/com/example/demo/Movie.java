@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @Setter
 @Getter
-@Entity
+@Entity(name = "movie")
 public class Movie {
     @Id
     @GeneratedValue

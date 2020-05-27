@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDate;
 
 
@@ -16,17 +14,20 @@ import java.time.LocalDate;
 @Entity
 public class Seance {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+    @ManyToOne
+    private Movie movie;
     private LocalDate localDate;
     private int duration;
-    private String langugeVersion;
+    private String languageVersion;
     private boolean is3D;
 
-    public Seance(LocalDate localDate, int duration, String langugeVersion, boolean is3D) {
+    public Seance(LocalDate localDate, int duration, String languageVersion, boolean is3D, Movie movie) {
         this.localDate = localDate;
         this.duration = duration;
-        this.langugeVersion = langugeVersion;
+        this.languageVersion = languageVersion;
         this.is3D = is3D;
+        this.movie = movie;
     }
 }

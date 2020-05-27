@@ -6,8 +6,9 @@ import lombok.Setter;
 
 import javax.persistence.*;
 
+
+//@Embeddable
 @NoArgsConstructor
-@Embeddable
 @Setter
 @Getter
 @Entity

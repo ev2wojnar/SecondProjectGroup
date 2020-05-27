@@ -28,7 +28,6 @@ public class CinemaController {
     public Cinema updateCinema(@RequestBody Cinema cinema){
         return cinemaService.saveCinema(cinema);
     }
-
     @DeleteMapping("/cinemas/{cinemaId}")
     public void deleteCinema(@PathVariable long cinemaId){
         cinemaService.deleteCinemaById(cinemaId);

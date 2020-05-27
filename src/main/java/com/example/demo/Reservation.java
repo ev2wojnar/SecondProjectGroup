@@ -4,10 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @NoArgsConstructor
 @Setter
@@ -15,13 +12,23 @@ import javax.persistence.Id;
 @Entity
 public class Reservation {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String customerName;
     private String customerSurname;
-    @Embedded
+    @ManyToOne
+    private Customer customer;
+    @ManyToOne
     private Seat seat;
     @Embedded
+    //@ManyToOne
     private TicketType ticketType;
 
+    public Reservation(String customerName, String customerSurname, Customer customer, Seat seat, TicketType ticketType) {
+        this.customerName = customerName;
+        this.customerSurname = customerSurname;
+        this.customer = customer;
+        this.seat = seat;
+        this.ticketType = ticketType;
+    }
 }
