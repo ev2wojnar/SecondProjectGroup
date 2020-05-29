@@ -13,7 +13,7 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @GetMapping("cinemas/customers/{customerId}")
+    @GetMapping("/cinemas/customers/{customerId}")
     public Customer findCustomer(@PathVariable long customerId){
         return customerService.findCustomerById(customerId);
     }

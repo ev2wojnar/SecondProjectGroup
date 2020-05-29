@@ -13,7 +13,7 @@ public class CinemaHallController {
     @Autowired
     private CinemaHallService cinemaHallService;
 
-    @GetMapping("cinemas/cinemaHall/{cinemaHallId}")
+    @GetMapping("/cinemas/cinemaHall/{cinemaHallId}")
     public CinemaHall findCinemaHall(@PathVariable long cinemaHallId){
         return cinemaHallService.findCinemaHallById(cinemaHallId);
 

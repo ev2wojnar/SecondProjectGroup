@@ -13,7 +13,7 @@ public class ReservationController {
     @Autowired
     private ReservationService reservationService;
 
-    @GetMapping("cinemas/reservation/{reservationId}")
+    @GetMapping("/cinemas/reservation/{reservationId}")
     public Reservation findReservation(@PathVariable long reservationId){
         return reservationService.findReservationById(reservationId);
     }
