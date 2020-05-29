@@ -12,11 +12,13 @@ import java.time.LocalDate;
 @Setter
 @Getter
 @Entity
+@Table(name = "seance")
 public class Seance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "movie_id")
     private Movie movie;
     private LocalDate localDate;
     private int duration;

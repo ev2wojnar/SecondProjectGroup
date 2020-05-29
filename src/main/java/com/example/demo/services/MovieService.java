@@ -14,4 +14,8 @@ public class MovieService {
     public Movie findMovieBYId(long id){
         return movieRepository.findById(id).orElse(null);
     }
+
+    public Iterable<Movie> findAllMovies(){
+        return movieRepository.findAll();
+    }
 }
