@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.model;
 
 public enum MovieGenre {
     ADVENTURE, ACTION, COMEDY, CRIME, DRAMA, FANTASY, HISTORICAL, HORROR,
