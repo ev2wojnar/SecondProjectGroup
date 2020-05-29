@@ -13,7 +13,7 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @GetMapping("/cinemas/movies/{movieId}")
+    @GetMapping("cinemas/movies/{movieId}")
     public Movie findMovie(@PathVariable long movieId){
         return  movieService.findMovieBYId(movieId);
     }
