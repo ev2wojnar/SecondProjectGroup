@@ -1,5 +1,7 @@
-package com.example.demo;
+package com.example.demo.ctrls;
 
+import com.example.demo.model.Cinema;
+import com.example.demo.services.CinemaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -8,6 +10,8 @@ public class CinemaController {
 
     @Autowired
     private CinemaService cinemaService;
+
+
 
     @GetMapping("/cinemas/{cinemaId}")
     public Cinema findCinema(@PathVariable long cinemaId){
