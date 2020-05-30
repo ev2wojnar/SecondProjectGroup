@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.ctrls.MessageController;
 import com.example.demo.model.*;
 import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,9 @@ public class SecondGroupProjectApplication {
     private CinemaHallRepository cinemaHallRepository;
     @Autowired
     private SeatRepository seatRepository;
+
+    @Autowired
+    private MessageController messageController;
 
 
     public static void main(String[] args) {
