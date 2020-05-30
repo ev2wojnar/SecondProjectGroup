@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import com.example.demo.ctrls.MessageController;
 import com.example.demo.model.*;
 import com.example.demo.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import javax.annotation.PostConstruct;
 import java.time.LocalDate;
-import java.util.Arrays;
 
 import static java.util.Arrays.asList;
 
@@ -29,6 +29,9 @@ public class SecondGroupProjectApplication {
     private CinemaHallRepository cinemaHallRepository;
     @Autowired
     private SeatRepository seatRepository;
+
+    @Autowired
+    private MessageController messageController;
 
 
     public static void main(String[] args) {

@@ -7,13 +7,14 @@ import lombok.Setter;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @NoArgsConstructor
 @Setter
 @Getter
 @Entity(name = "movie")
-public class Movie {
+public class Movie implements Serializable {
     @Id
     @GeneratedValue
     private long id;
@@ -28,6 +29,8 @@ public class Movie {
     private String staff;
     private int duration;
     private double ticketPrice;
+//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "seance")
+//    private List<Seance> seanceList = new ArrayList<>();
 
     public Movie(String title, String description, MovieGenre movieGenre, LocalDate releaseDate,
                  String production, String direction, String staff, int duration, double ticketPrice) {
