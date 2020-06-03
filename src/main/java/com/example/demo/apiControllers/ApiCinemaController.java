@@ -1,15 +1,13 @@
-package com.example.demo.ctrls;
+package com.example.demo.apiControllers;
 
 import com.example.demo.model.Cinema;
 import com.example.demo.services.CinemaService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
-@RequestMapping("/cinemas")
-public class CinemaController {
+@RestController
+@RequestMapping("api/cinemas")
+public class ApiCinemaController {
 
     @Autowired
     private CinemaService cinemaService;
@@ -21,17 +19,17 @@ public class CinemaController {
         return cinemaService.findCinemaById(cinemaId);
     }
 
-    @GetMapping()
+    @GetMapping("")
     public Iterable<Cinema> findCinema(){
         return cinemaService.findAllCinemas();
     }
 
-    @PostMapping()
+    @PostMapping("")
     public Cinema createCinema(@RequestBody Cinema cinema){
         return cinemaService.saveCinema(cinema);
     }
 
-    @PutMapping()
+    @PutMapping("")
     public Cinema updateCinema(@RequestBody Cinema cinema){
         return cinemaService.saveCinema(cinema);
     }
@@ -39,10 +37,6 @@ public class CinemaController {
     public void deleteCinema(@PathVariable long cinemaId){
         cinemaService.deleteCinemaById(cinemaId);
     }
-
-
-
-
 
 
 }

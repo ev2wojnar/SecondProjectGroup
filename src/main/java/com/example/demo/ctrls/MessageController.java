@@ -37,6 +37,11 @@ public class MessageController {
         model.addAttribute("movie", movie);
         return "details";
     }
+    @GetMapping("/priceList")
+    public String priceList(@RequestParam(name="price", required=false, defaultValue="0")String name, Model model){
+        //model.addAttribute("price", model);
+        return "priceList";
+    }
 
 //    @GetMapping("/movieDescription")
 //    public String movieDesc(@RequestParam(name = "name3", required = false, defaultValue = ))
