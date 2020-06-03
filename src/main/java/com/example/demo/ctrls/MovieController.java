@@ -20,8 +20,8 @@ public class MovieController {
     public String movieDetails(@PathVariable long movieId, Model model) {
         Movie movie = movieService.findMovieBYId(movieId);
         model.addAttribute("movie", movie);
-        model.addAttribute("movieGenre", movie.getMovieGenre().getLocaleName().get("en"));
-        return "movieDetails";
+        model.addAttribute("movieGenre", movie.getMovieGenre().getLocaleName().get("pl"));
+        return "movieScreen";
     }
 
 }

@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,10 @@
 	
 </head>
 <body>
-   <div>
+	<!---<h2 th:text="${movie.getTitle()}"/>
+	<p th:text="${movie.getDescription()}"/>
+	<p th:text="${movieGenre}"/>--->
+	<div>
 	   <div>
 			<a href="index.html">Kino X</a>
 		</div>
@@ -35,28 +38,14 @@
 		<div>
 			<img src="obrazek filmu" />
 		</div>
-		<div>Tytuł filmu</div>
-		<div>Opis filmu</div>
-		<div>Premiera</div>
-		<div>Produkcja</div>
-		<div>Reżyseria</div>
-		<div>
-			Obsada
-				<ul>
-					<li>
-						Aktor
-					</li>
-					<li>
-						Aktor
-					</li>
-					<li>
-						Aktor
-					</li>
-					<li>
-						Aktor
-					</li>
-				</ul>
-		</div>
+		<h2 th:text="${movie.getTitle()}"/>
+		<p th:text="${movie.getDescription()}"/>
+		<p th:text="${movieGenre}"/>
+		<p th:text="'Data premiery: ' + ${movie.getReleaseDate()}"/>
+		<p th:text="'Reżyseria: ' + ${movie.getDirection()}"/>
+		<p th:text="${movie.getDuration() + 'min'}"/>
+        <p th:text="${movie.getStaff()}"/>
+
 		<div>
 			<a href="chooseTicket.html">Kup bilet</a>
 		</div>
@@ -74,6 +63,6 @@
 	</div>
 	<div>
 		<img src="obrazek filmu" />
-	</div>
+	</div>--->
 </body>
 </html>

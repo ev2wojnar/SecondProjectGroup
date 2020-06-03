@@ -3,13 +3,10 @@ package com.example.demo.ctrls;
 import com.example.demo.model.Reservation;
 import com.example.demo.services.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/cinemas/reservation")
+@RequestMapping("/api/reservation")
 public class ReservationController {
 
     @Autowired
@@ -18,5 +15,12 @@ public class ReservationController {
     @GetMapping("/{reservationId}")
     public Reservation findReservation(@PathVariable long reservationId){
         return reservationService.findReservationById(reservationId);
+    }
+
+    @PostMapping()
+    @ResponseBody
+    public Reservation addReservation(@RequestBody Reservation reservation) {
+        // DO STUFF
+        return reservation;
     }
 }

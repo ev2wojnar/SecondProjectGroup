@@ -20,6 +20,7 @@ public class Movie implements Serializable {
     private long id;
 
     private String title;
+
     private String description;
     private MovieGenre movieGenre;
    // private String type;
