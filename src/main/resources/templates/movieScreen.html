@@ -9,9 +9,6 @@
 	
 </head>
 <body>
-	<!---<h2 th:text="${movie.getTitle()}"/>
-	<p th:text="${movie.getDescription()}"/>
-	<p th:text="${movieGenre}"/>--->
 	<div>
 	   <div>
 			<a href="index.html">Kino X</a>
@@ -34,10 +31,11 @@
 			<a href="emptyBucket.html">Koszyk</a>
 		</div>
 	</div>
+    <div>
+        <!---główny obrazek filmu--->
+        <img src="obrazek filmu" />
+    </div>
 	<div>
-		<div>
-			<img src="obrazek filmu" />
-		</div>
 		<h2 th:text="${movie.getTitle()}"/>
 		<p th:text="${movie.getDescription()}"/>
 		<p th:text="${movieGenre}"/>
@@ -47,20 +45,21 @@
         <p th:text="${movie.getStaff()}"/>
 
 		<div>
-			<a href="chooseTicket.html">Kup bilet</a>
+            <a th:href="@{/buyTicket.html}">Kup bilet</a>
 		</div>
 	</div>
 	<div>
-		Obsada
+		<!---obsada--->
 		<img src="aktor" />
 		<img src="aktor" />
 		<img src="aktor" />
 		<img src="aktor" />
 		<img src="aktor" />
 	</div>
-	<div>
-		<img src="obrazek filmu" />
-	</div>
+    <!---zdjęcia z filmu--->
+    <div>
+        <img src="obrazek filmu" />
+    </div>
 	<div>
 		<img src="obrazek filmu" />
 	</div>--->
