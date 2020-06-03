@@ -102,16 +102,16 @@ public class SecondGroupProjectApplication {
         cinemaRepository.save(kinoY);
         //----------------------------//
 
-        Customer jeff = new Customer("Jan", "Kowalski");
-        Customer jeff2 = new Customer("Andrzej", "Barański");
-        Customer jeff3 = new Customer("Aleksandra", "Kurek");
-        Customer jeff4 = new Customer("Weronika", "Pałkiewicz");
-        Customer jeff5 = new Customer("Marta", "Kozioł");
-        Customer jeff6 = new Customer("Kajetan", "Nowak");
-        Customer jeff7 = new Customer("Tomasz", "Adamczyk");
-        Customer jeff8 = new Customer("Karolina", "Bednarz");
-        Customer jeff9 = new Customer("Paulina", "Pawlik");
-        customerRepository.saveAll(asList(new Customer[] {jeff, jeff2, jeff3, jeff4, jeff5}));
+        Customer jeff = new Customer("My name's Jeff", "Hello");
+        Customer jeff2 = new Customer("Andrju", "BeBe");
+        Customer jeff3 = new Customer("Parallel", "Stream");
+        Customer jeff4 = new Customer("Peter", "Prune");
+        Customer jef5 = new Customer("Admin", "Admin");
+        Customer jeff6 = new Customer("Student", "Debil");
+        Customer jeff7 = new Customer("Dziekan", "Piwo");
+        Customer jeff8 = new Customer("Test123", "231Tset");
+        Customer jeff9 = new Customer("Simulated", "Reality");
+        customerRepository.saveAll(asList(new Customer[] {jeff, jeff2, jeff3, jeff4, jef5}));
 //        List<Customer> customerList = new ArrayList<Customer>();
 //        customerList.add(jeff);
 //        customerList.add(jeff2);
@@ -119,8 +119,8 @@ public class SecondGroupProjectApplication {
         //customerRepository.saveAll(customerList);
         //-----------------------------------------//
 
-        Seance s1 = new Seance(LocalDate.of(1899, 7, 12), 4, "polski (dubbing)", true, frozen);
-        Seance s2 = new Seance(LocalDate.of(1999, 3, 10), 3, "polski (napisy)", false, fightClub);
+        Seance s1 = new Seance(LocalDate.of(1899, 7, 12), 4, "yourMOM", true, frozen);
+        Seance s2 = new Seance(LocalDate.of(1999, 3, 10), 3, "yourDAD", false, fightClub);
         seanceRepository.save(s1);
         seanceRepository.save(s2);
         //--------------------//

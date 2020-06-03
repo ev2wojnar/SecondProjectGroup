@@ -45,20 +45,4 @@ public class Movie implements Serializable {
         this.duration = duration;
         this.ticketPrice = ticketPrice;
     }
-
-    @Override
-    public String toString() {
-        return "Movie{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", description='" + description + '\'' +
-                ", movieGenre=" + movieGenre +
-                ", releaseDate=" + releaseDate +
-                ", production='" + production + '\'' +
-                ", direction='" + direction + '\'' +
-                ", staff='" + staff + '\'' +
-                ", duration=" + duration +
-                ", ticketPrice=" + ticketPrice +
-                '}';
-    }
 }

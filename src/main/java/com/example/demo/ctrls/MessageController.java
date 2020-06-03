@@ -1,23 +1,44 @@
 package com.example.demo.ctrls;
 
 import com.example.demo.model.Movie;
-import com.example.demo.model.MovieGenre;
+import com.example.demo.services.MovieService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import java.time.LocalDate;
 
 @Controller
 public class MessageController {
-    Movie up = new Movie ("Odlot", "70-letni Carl po śmierci żony zamienia swój dom w statek powietrzny i odlatuje do Ameryki Południowej, by spełnić swoje marzenie. Przez przypadek zabiera ze sobą ośmioletniego skauta.",
-            MovieGenre.ANIMATION.FAMILY.COMEDY.ADVENTURE, LocalDate.of(2009,5,13), "USA", "Pete Docter, Bob Peterson", "Wojciech Siemion, Ignacy Gogolewski",96 , 12.5);
 
     @GetMapping("/welcome")
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="You") String name, Model model) {
-        model.addAttribute("name", up.getDescription() );
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
+        model.addAttribute("name", name);
         return "welcome";
     }
+    @GetMapping("/goodbye")
+    public String greeting2(@RequestParam(name="name2", required=false, defaultValue="cruel world") String name, Model model) {
+        model.addAttribute("name2", name);
+        return "goodbye";
+    }
+    @Autowired
+    private MovieService movieService;
+    public Movie findMovie(@PathVariable long movieId){
+        return  movieService.findMovieBYId(movieId);
+//    public String findMovie(@PathVariable long movieId, @RequestParam(name="movie", required=false, defaultValue="empty") Movie movie, Model model) {
+//        movie = movieService.findMovieBYId(movieId);
+//        model.addAttribute("movie", movie);
+//        return "movieID";
+    }
+    @GetMapping("/details")
+    public String movieDetails(@RequestParam(name="movie", required=false, defaultValue="0") String name, Model model) {
+        Movie movie = findMovie(Integer.parseInt(name));
+        model.addAttribute("movie", movie);
+        return "details";
+    }
+
+//    @GetMapping("/movieDescription")
+//    public String movieDesc(@RequestParam(name = "name3", required = false, defaultValue = ))
 
 }
