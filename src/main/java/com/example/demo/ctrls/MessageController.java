@@ -37,6 +37,31 @@ public class MessageController {
         model.addAttribute("movie", movie);
         return "details";
     }
+    @GetMapping("/priceList")
+    public String priceList(@RequestParam(name="price", required=false, defaultValue="0")String name, Model model){
+        //model.addAttribute("price", model);
+        return "priceList";
+    }
+    @GetMapping("/happyHours")
+    public String happyHours(@RequestParam(name="happyHours", required=false, defaultValue="gfggfg")String name, Model model){
+        return "sale";
+    }
+    @GetMapping("/index")
+    public String showMain(@RequestParam(name="index2", required=false, defaultValue="1")String name, Model model){
+        return "index";
+    }
+    @GetMapping("/chooseCity")
+    public String selectCity(@RequestParam(name="selectedCity", required = false, defaultValue = "0")String name, Model model){
+        return "chooseCity";
+    }
+    @GetMapping("/bucket")
+    public String goToBucket(@RequestParam(name = "emptyBucket", required = false)String name, Model model){
+        return "emptyBucket";
+    }
+//    @GetMapping("/cinemaRepertoire")
+//    public String showAllMovies(@RequestParam(name = "allMovies", required = false)String name, Model model){
+//        return "cinemaRepertoire";
+//    }
 
 //    @GetMapping("/movieDescription")
 //    public String movieDesc(@RequestParam(name = "name3", required = false, defaultValue = ))

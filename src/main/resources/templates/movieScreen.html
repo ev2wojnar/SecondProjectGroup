@@ -11,24 +11,24 @@
 <body>
 	<div>
 	   <div>
-			<a href="index.html">Kino X</a>
+			<a th:href="@{/index}">Kino X</a>
 		</div>
 		<ul>
 			<li>
-				<a href="index.html">Aktualności</a>
+				<a th:href="@{/index}">Aktualności</a>
 			</li>
 			<li>
-				<a href="chooseCity.html">Repertuar</a>
+				<a th:href="@{/chooseCity}">Repertuar</a>
 			</li>
 			<li>
-				<a href="priceList.html">Cennik</a>
+				<a th:href="@{/priceList}">Cennik</a>
 			</li>
 			<li>
-				<a href="sale.html">Promocje</a>
+				<a th:href="@{/happyHours}">Promocje</a>
 			</li>
 		</ul>
 		<div>
-			<a href="emptyBucket.html">Koszyk</a>
+			<a th:href="@{/bucket}">Koszyk</a>
 		</div>
 	</div>
     <div>
@@ -45,7 +45,7 @@
         <p th:text="${movie.getStaff()}"/>
 
 		<div>
-            <a th:href="@{/buyTicket.html}">Kup bilet</a>
+            <a th:href="@{/cinemas/ticketSpecification}">Kup bilet</a>
 		</div>
 	</div>
 	<div>
@@ -62,6 +62,6 @@
     </div>
 	<div>
 		<img src="obrazek filmu" />
-	</div>--->
+	</div>
 </body>
 </html>

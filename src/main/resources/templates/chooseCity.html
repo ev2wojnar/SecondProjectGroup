@@ -1,50 +1,51 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	
     <title>Choose city</title>
-	
 	<link rel="stylesheet" href="style.css" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
-	
+
+
 </head>
 <body>
+<div th:text="${selectedCity}"/>
     <div id="wybierzmiasto">
 		<h2>Wybierz miasto</h2>
 	</div>
 	<div>
 		<ol id="citylist">
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
 			<li>
-				<a href="cinemaRepertoire.html" id="cityitemlink">Nazwa miasta</a>
+				<a th:href="@{/cinemas/cinemaRepertoire}" id="cityitemlink">Nazwa miasta</a>
 			</li>
-		</ul>
+		</ol>
 	</div>
 </body>
 </html>
