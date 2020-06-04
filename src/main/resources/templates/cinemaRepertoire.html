@@ -7,76 +7,168 @@
 	
     <title>Cinema repertoire</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div th:text="${allMovies}"/>
-   <div>
-	   <div>
-			<a th:href="@{/index}">Kino X</a>
-		</div>
-		<ul>
+   <div id="header">
+       <a th:href="@{/index}" class="linkwhite">
+	        <div id="kinoxtile">
+			    <h3>Kino X</h3>
+		    </div>
+       </a>
+		<ul id="menulist">
 			<li>
-				<a th:href="@{/index}">Aktualności</a>
+				<a th:href="@{/index}" class="menulink">Aktualności</a>
+            </li>
+			<li>
+				<a th:href="@{/chooseCity}" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a th:href="@{/chooseCity}">Repertuar</a>
+				<a th:href="@{/priceList}" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a th:href="@{/priceList}">Cennik</a>
-			</li>
-			<li>
-				<a th:href="@{/happyHours}">Promocje</a>
+				<a th:href="@{/happyHours}" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<div>
-			<a th:href="@{/bucket}">Koszyk</a>
+       <a th:href="@{/bucket}">
+		<div id="baskettile">
+            <h3>Koszyk</h3>
 		</div>
+       </a>
+       <div style="clear: both;"></div>
 	</div>
-	<div>Wybrane miasto</div>
-	<div>*znaczek odświeżania*</div>
-	<div>*pasek*</div>
-	<div>Wybierz film</div>
-	<div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
-		<div>
-			<a href="movieScreen.html">
-				<img src="miniaturka filmu" />film
-			</a>
-		</div>
+	<div id="miastotile">
+		<div id="wybranemiasto">*Wybrane miasto*</div>
+	</div>
+	<div id="pasek"></div>
+	<div id="wybierzfilm">
+		<h2>Wybierz film</h2>
+	</div>
+	<div id="moviecontainer">
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<a href="movieScreen.html">
+			<div id="movie">
+				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
 	</div>
 </body>
 </html>

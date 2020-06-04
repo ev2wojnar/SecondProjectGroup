@@ -7,46 +7,62 @@
 	
     <title>Price list</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div th:text="${price} "/>
-    <div>
-	   <div>
-			<a th:href="@{/index}">Kino X</a>
-		</div>
-		<ul>
+    <div id="header">
+        <a th:href="@{/index}" class="linkwhite">
+           <div id="kinoxtile">
+               <h3>Kino X</h3>
+            </div>
+        </a>
+		<ul id="menulist">
 			<li>
-				<a th:href="@{/index}">Aktualności</a>
+				<a href="index.html" class="menulink">Aktualności</a>
 			</li>
 			<li>
-				<a th:href="@{/chooseCity}">Repertuar</a>
+				<a href="chooseCity.html" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a th:href="@{/priceList}">Cennik</a>
+				<a href="priceList.html" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a th:href="@{/happyHours}">Promocje</a>
+				<a href="sale.html" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<div>
-			<a th:href="@{/bucket}">Koszyk</a>
-		</div>
+        <a th:href="@{/bucket}">
+            <div id="baskettile">
+                <h3>Koszyk</h3>
+            </div>
+        </a>
+        <div style="clear: both;"></div>
 	</div>
-	<div>Ceny biletów</div>
+	<div id="ticketprice">
+		<h3>Ceny biletów</h3>
+	</div>
 	<div>
-		<div>
-			<h2>Bilety 2D</h2>
-		</div>
-		<div>
-			<h2>Bilety 3D</h2>
-		</div>
-		<div>
-			<h5>15.50 zł</h5>
-		</div>
-		<div>
-			<h5>18.50 zł</h5>
-			<p>+ okulary w cenie</p>
-		</div>
+		<table width="1900" align="center">
+			<tr id="tabletop">
+				<td colspan="2" align="center" id="tabletopleft">
+					<h2>Bilety 2D</h2>
+				</td>
+				<td colspan="2" align="center" id="tabletopright">
+					<h2>Bilety 3D</h2>
+				</td>
+			</tr>
+			<tr id="tablebottom">
+				<td colspan="2" align="center" id="tablebottomleft">
+					<h5>15.50 zł</h5>
+				</td>
+				<td colspan="2" align="center" >
+					<h5>18.50 zł</h5>
+					<p id="okularywcenie">+ okulary w cenie</p>
+				</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
