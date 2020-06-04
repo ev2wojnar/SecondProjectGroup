@@ -16,7 +16,7 @@ public class ApiMovieController {
     @GetMapping("/{movieId}")
     public Movie findMovie(@PathVariable long movieId){
         return  movieService.findMovieBYId(movieId);
-//    public String findMovie(@PathVariable long movieId, @RequestParam(name="movie", required=false, defaultValue="empty") Movie movie, Model model) {
+//    public String findMovies(@PathVariable long movieId, @RequestParam(name="movie", required=false, defaultValue="empty") Movie movie, Model model) {
 //        movie = movieService.findMovieBYId(movieId);
 //        model.addAttribute("movie", movie);
 //        return "movieID";

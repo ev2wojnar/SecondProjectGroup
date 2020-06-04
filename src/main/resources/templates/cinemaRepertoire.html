@@ -48,127 +48,142 @@
 		<h2>Wybierz film</h2>
 	</div>
 	<div id="moviecontainer">
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<a href="movieScreen.html">
-			<div id="movie">
-				<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>
-			</div>
-		</a>
-		<div style="clear: both;"></div>
+        <div th:each="movie : ${movies}">
+            <a th:href="'/cinemas/movies/' + ${movie.getId()}">
+
+                <!--<div style="background: url (https://pogotowiestatystyczne.pl/wp-content/uploads/2018/10/doge-300x278.jpg);">-->
+                    <!--<p th:text="$movie.getReleaseDate()"/>-->
+                    <!--<p th:text="${movie.getTitle()}"/>-->
+                    <p>Hello!</p>
+
+
+                <!--</div>-->
+                <!--<p style="text-align:center;" th:text="'-' + ${movie.getTitle()} + '-'"></p>-->
+            <!--</a>-->
+        </div>
+
+
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<a href="movieScreen.html">-->
+			<!--<div id="movie">-->
+				<!--<img src="miniaturka filmu" id="movieimg"/><p id="tytul">film</p>-->
+			<!--</div>-->
+		<!--</a>-->
+		<!--<div style="clear: both;"></div>-->
 	</div>
 </body>
 </html>

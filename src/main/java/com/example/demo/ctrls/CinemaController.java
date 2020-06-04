@@ -29,6 +29,7 @@ public class CinemaController {
     public String showAllMovies(@RequestParam(name = "allMovies", required = false)String name, Model model){
         return "cinemaRepertoire";
     }
+
     @GetMapping("/ticketSpecification")
     public String buyTicket(@RequestParam(name = "ticketSpecification", required = false)String name, Model model){
         return "buyTicket";
