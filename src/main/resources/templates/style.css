@@ -80,3 +80,50 @@ ul > li
 {
 	text-align: center;
 }
+
+#ticketprice
+{
+	width: 1850px;
+	font-size: 40px;
+	margin:50px;
+	color: #eedc3a;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#tabletop
+{
+	font-size: 45px;
+	color: white;
+}
+
+#tabletopleft
+{
+	border-bottom-style: dashed;
+	border-right-style: dashed;
+	border-color: yellow;
+}
+
+#tabletopright
+{
+	border-bottom-style: dashed;
+	border-color: yellow;
+}
+
+#tablebottom
+{
+	font-size: 60px;
+	color: #eedc3a;
+	height: 450px;
+}
+
+#tablebottomleft
+{
+	border-right-style: dashed;
+	border-color: yellow;
+}
+
+#okularywcenie
+{
+	font-size: 30px;
+}

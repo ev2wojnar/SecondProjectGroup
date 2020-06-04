@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,37 +7,61 @@
 	
     <title>Price list</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+	
 </head>
 <body>
-    <div>
-	   <div>
-			<a href="index.html">Kino X</a>
-		</div>
-		<ul>
+    <div id="header">
+	   <a href="index.html" class="linkwhite">
+			<div id="kinoxtile">
+				<h3>Kino X</h3>
+			</div>
+		</a>
+		<ul id="menulist">
 			<li>
-				<a href="index.html">Aktualności</a>
+				<a href="index.html" class="menulink">Aktualności</a>
 			</li>
 			<li>
-				<a href="chooseCity.html">Repertuar</a>
+				<a href="chooseCity.html" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a href="priceList.html">Cennik</a>
+				<a href="priceList.html" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a href="sale.html">Promocje</a>
+				<a href="sale.html" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<div>
-			<a href="emptyBucket.html">Koszyk</a>
-		</div>
+		<a href="emptyBucket.html">
+			<div id="baskettile">
+				<h3>Koszyk</h3>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
 	</div>
-	<div>Ceny biletów</div>
+	<div id="ticketprice">
+		<h3>Ceny biletów</h3>
+	</div>
 	<div>
-		<div>Bilety 2D</div>
-		<div>Bilety 3D</div>
-		<div>15.50 zł</div>
-		<div>18.50 zł</div>
-		<div>+ okulary w cenie</div>
+		<table width="1900" align="center">
+			<tr id="tabletop">
+				<td colspan="2" align="center" id="tabletopleft">
+					<h2>Bilety 2D</h2>
+				</td>
+				<td colspan="2" align="center" id="tabletopright">
+					<h2>Bilety 3D</h2>
+				</td>
+			</tr>
+			<tr id="tablebottom">
+				<td colspan="2" align="center" id="tablebottomleft">
+					<h5>15.50 zł</h5>
+				</td>
+				<td colspan="2" align="center" >
+					<h5>18.50 zł</h5>
+					<p id="okularywcenie">+ okulary w cenie</p>
+				</td>
+			</tr>
+		</table>
 	</div>
 </body>
 </html>
