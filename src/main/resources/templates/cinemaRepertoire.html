@@ -49,17 +49,17 @@
 	</div>
 	<div id="moviecontainer">
         <div th:each="movie : ${movies}">
-            <a th:href="'/cinemas/movies/' + ${movie.getId()}">
+            <a th:href="'/movies/' + ${movie.getId()}">
 
-                <!--<div style="background: url (https://pogotowiestatystyczne.pl/wp-content/uploads/2018/10/doge-300x278.jpg);">-->
-                    <!--<p th:text="$movie.getReleaseDate()"/>-->
-                    <!--<p th:text="${movie.getTitle()}"/>-->
-                    <p>Hello!</p>
+                <div style="background-color:#FF00FF">
+                    <p th:text="${movie.getReleaseDate()}"/>
+                    <p th:text="${movie.getTitle()}"/>
 
 
-                <!--</div>-->
-                <!--<p style="text-align:center;" th:text="'-' + ${movie.getTitle()} + '-'"></p>-->
-            <!--</a>-->
+
+                </div>
+                <!--<p style="text-align:center;" th:text="'-' + ${movie.getTitle() + '-'}"></p>-->
+            </a>
         </div>
 
 
