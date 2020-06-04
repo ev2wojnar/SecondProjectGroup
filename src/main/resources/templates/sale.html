@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,22 +9,23 @@
 	
 </head>
 <body>
-    <div>
+<p th:text="'tired' + ${happyHours}"/>
+	<div>
 	   <div>
-			<a href="index.html">Kino X</a>
+			<a th:href="@{/index}">Kino X</a>
 		</div>
 		<ul>
 			<li>
-				<a href="index.html">Aktualności</a>
+				<a th:href="@{/index}">Aktualności</a>
 			</li>
 			<li>
-				<a href="chooseCity.html">Repertuar</a>
+				<a th:href="@{chooseCity}">Repertuar</a>
 			</li>
 			<li>
-				<a href="priceList.html">Cennik</a>
+				<a th:href="@{/priceList}">Cennik</a>
 			</li>
 			<li>
-				<a href="sale.html">Promocje</a>
+				<a th:href="@{/happyHours}">Promocje</a>
 			</li>
 		</ul>
 		<div>
