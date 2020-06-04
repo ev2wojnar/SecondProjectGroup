@@ -54,6 +54,14 @@ public class MessageController {
     public String selectCity(@RequestParam(name="selectedCity", required = false, defaultValue = "0")String name, Model model){
         return "chooseCity";
     }
+    @GetMapping("/bucket")
+    public String goToBucket(@RequestParam(name = "emptyBucket", required = false)String name, Model model){
+        return "emptyBucket";
+    }
+//    @GetMapping("/cinemaRepertoire")
+//    public String showAllMovies(@RequestParam(name = "allMovies", required = false)String name, Model model){
+//        return "cinemaRepertoire";
+//    }
 
 //    @GetMapping("/movieDescription")
 //    public String movieDesc(@RequestParam(name = "name3", required = false, defaultValue = ))

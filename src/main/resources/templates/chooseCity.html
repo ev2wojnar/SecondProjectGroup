@@ -9,36 +9,36 @@
 
 </head>
 <body>
-<p th:text="'wybierz miasto chopie' + ${selectedCity}"/>
+<div th:text="${selectedCity}"/>
 <div>Wybierz miasto</div>
 <div>
     <ul>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Wroclaw</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Zabrze</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{cinemas/cinemaRepertoire}">Warszawa</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{cinemas/cinemaRepertoire}">Poznan</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Krakow</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Szczecin</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Torun</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Lodz</a>
         </li>
         <li>
-            <a href="cinemaRepertoire.html">Nazwa miasta</a>
+            <a th:href="@{/cinemas/cinemaRepertoire}">Rzeczow</a>
         </li>
     </ul>
 </div>

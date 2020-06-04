@@ -7,14 +7,14 @@
 	
     <title>Kino X</title>
 	
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" th:href="@{style.css}" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
 	
 </head>
 <body>
 <p th:text="${index2}"/>
 	<div id="header">
-	   <a th:href="@{index.html}" class="linkwhite">
+	   <a th:href="@{/index}" class="linkwhite">
 			<div id="kinoxtile">
 				<h3>Kino X</h3>
 			</div>
@@ -33,7 +33,7 @@
 				<a th:href="@{/happyHours}" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<a href="emptyBucket.html">
+		<a th:href="@{/bucket}">
 			<div id="baskettile">
 				<h3>Koszyk</h3>
 			</div>

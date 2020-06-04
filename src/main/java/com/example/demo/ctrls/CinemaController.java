@@ -4,6 +4,7 @@ import com.example.demo.model.Cinema;
 import com.example.demo.services.CinemaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 @Controller
@@ -23,6 +24,10 @@ public class CinemaController {
     @GetMapping()
     public Iterable<Cinema> findCinema(){
         return cinemaService.findAllCinemas();
+    }
+    @GetMapping("/cinemaRepertoire")
+    public String showAllMovies(@RequestParam(name = "allMovies", required = false)String name, Model model){
+        return "cinemaRepertoire";
     }
 
     @PostMapping()
@@ -51,6 +56,12 @@ public class CinemaController {
 //    public String happyHours(@RequestParam(name="happyHours", required=false, defaultValue="gfggfg")String name, Model model){
 //        return "sale";
 //    }
+    @GetMapping("/{}/{cinemaId}")
+    public String movieDetails(@PathVariable long cinemaId, Model model) {
+        Cinema cinema = cinemaService.findCinemaById(cinemaId);
+        model.addAttribute( cinema);
+        return "movieScreen";
+    }
 
 
 
