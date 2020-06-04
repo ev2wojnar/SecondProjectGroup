@@ -7,61 +7,71 @@
     
 	<title>Movie screen</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+	
 </head>
 <body>
-	<div>
-	   <div>
-			<a th:href="@{/index}">Kino X</a>
-		</div>
-		<ul>
+	<div id="header">
+	   <a th:href="@{/index}" class="linkwhite">
+			<div id="kinoxtile">
+				<h3>Kino X</h3>
+			</div>
+		</a>
+		<ul id="menulist">
 			<li>
-				<a th:href="@{/index}">Aktualności</a>
+				<a th:href="@{/index}" class="menulink">Aktualności</a>
 			</li>
 			<li>
-				<a th:href="@{/chooseCity}">Repertuar</a>
+				<a th:href="@{chooseCity}" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a th:href="@{/priceList}">Cennik</a>
+				<a th:href="@{/priceList}" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a th:href="@{/happyHours}">Promocje</a>
+				<a th:href="@{/happyHours}" class="menulink">Promocje</a>
 			</li>
 		</ul>
+		<a th:href="@{/bucket}">
+			<div id="baskettile">
+				<h3>Koszyk</h3>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
+	</div>
+    <div id="filmdescription">
 		<div>
-			<a th:href="@{/bucket}">Koszyk</a>
+			<!---główny obrazek filmu--->
+			<img src="obrazek filmu" id="mainfilmimg"/>
+		</div>
+		<div>
+			<h2 th:text="${movie.getTitle()}" id="movietitle"></h2>
+			<div id="filminfotile">
+				<p th:text="${movie.getDescription()}" id="filminfo"></p>
+			</div>
+			<div id="additionainfotile">
+				<p th:text="${movieGenre}" class="additionalinfo"></p>
+				<p th:text="'Data premiery: ' + ${movie.getReleaseDate()}" class="additionalinfo"></p>
+				<p th:text="'Reżyseria: ' + ${movie.getDirection()}" class="additionalinfo"></p>
+				<p th:text="${movie.getDuration() + 'min'}" class="additionalinfo"></p>
+				<p th:text="${movie.getStaff()}" class="additionalinfo"></p>
+			</div>
+			<div>
+				<a th:href="@{/cinemas/ticketSpecification}" id="buyticket">Kup bilet</a>
+			</div>
 		</div>
 	</div>
-    <div>
-        <!---główny obrazek filmu--->
-        <img src="obrazek filmu" />
-    </div>
-	<div>
-		<h2 th:text="${movie.getTitle()}"/>
-		<p th:text="${movie.getDescription()}"/>
-		<p th:text="${movieGenre}"/>
-		<p th:text="'Data premiery: ' + ${movie.getReleaseDate()}"/>
-		<p th:text="'Reżyseria: ' + ${movie.getDirection()}"/>
-		<p th:text="${movie.getDuration() + 'min'}"/>
-        <p th:text="${movie.getStaff()}"/>
-
-		<div>
-            <a th:href="@{/cinemas/ticketSpecification}">Kup bilet</a>
-		</div>
-	</div>
-	<div>
+	<div style="clear: both;"></div>
+	<div id="crew">
 		<!---obsada--->
-		<img src="aktor" />
-		<img src="aktor" />
-		<img src="aktor" />
-		<img src="aktor" />
-		<img src="aktor" />
+		<img src="aktor" class="actor"/>
+		<img src="aktor" class="actor"/>
+		<img src="aktor" class="actor"/>
+		<img src="aktor" class="actor"/>
+		<img src="aktor" class="actor"/>
 	</div>
     <!---zdjęcia z filmu--->
-    <div>
-        <img src="obrazek filmu" />
-    </div>
-	<div>
-		<img src="obrazek filmu" />
-	</div>
+    <img src="obrazek filmu" class="additionalfilmimg"/>
+	<img src="obrazek filmu" class="additionalfilmimg"/>
 </body>
 </html>

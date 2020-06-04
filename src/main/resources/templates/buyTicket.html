@@ -5,32 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
-	<title>Movie screen</title>
+	<title>Buy ticket</title>
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
 	
 </head>
 <body>
 <a th:text="'lowIQsession ' + ${ticketSpecification}"/>
-   <div>
-	   <div>
-			<a th:href="@{/index}">Kino X</a>
-		</div>
-		<ul>
+   <div id="header">
+	   <a th:href="@{/index}" class="linkwhite">
+			<div id="kinoxtile">
+				<h3>Kino X</h3>
+			</div>
+		</a>
+		<ul id="menulist">
 			<li>
-				<a th:href="@{/index}">Aktualności</a>
+				<a th:href="@{/index}" class="menulink">Aktualności</a>
 			</li>
 			<li>
-				<a th:href="@{/chooseCity}">Repertuar</a>
+				<a th:href="@{chooseCity}" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a th:href="@{/priceList}">Cennik</a>
+				<a th:href="@{/priceList}" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a th:href="@{/happyHours}">Promocje</a>
+				<a th:href="@{/happyHours}" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<div>
-			<a th:href="@{/bucket}">Koszyk</a>
-		</div>
+		<a th:href="@{/bucket}">
+			<div id="baskettile">
+				<h3>Koszyk</h3>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
 	</div>
 	<div>*strzałka*Film: *Nazwa filmu*</div>
 	<div>
