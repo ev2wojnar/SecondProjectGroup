@@ -127,3 +127,102 @@ ul > li
 {
 	font-size: 30px;
 }
+
+#wybierzmiasto
+{
+	width: 400px;
+	height: 100px;
+	text-align: center;
+	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 30px;
+	line-height: 20px;
+	border: solid;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+
+#citylist
+{
+	list-style-type: none;
+	padding: 0px;
+	text-align: center;
+	font-size: 29px;
+	line-height: 80px;
+}
+
+#cityitemlink
+{
+	color: #eedc3a;
+}
+
+#wybranemiasto
+{
+	width: 300px;
+	height: 50px;
+	text-align: center;
+	margin: 20px;
+	font-size: 25px;
+	line-height: 50px;
+	border: solid;
+	border-color: gray;
+	color: gray;
+}
+
+#miastotile
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 1900px;
+}
+
+#pasek
+{
+	width: 1860px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	border-bottom-style: dashed;
+	border-bottom-color: #eedc3a;
+}
+
+#wybierzfilm
+{
+	width: 1900px;
+	height: 50px;
+	text-align: left;
+	margin: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 25px;
+	line-height: 50px;
+	padding-left: 20px;
+}
+
+#moviecontainer
+{
+	width: 1860px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#movie
+{
+	text-align: center;
+	float: left;
+	margin: 38.5px;
+}
+
+#movieimg
+{
+	height: 250px;
+	width: 155px;
+}
+
+#tytul
+{
+	color: white;
+}
