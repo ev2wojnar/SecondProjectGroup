@@ -7,12 +7,17 @@
     
 	<title>Empty bucket</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+	
 </head>
 <body>
     <div th:text="${emptyBucket}"/>
-	<div>Twój koszyk jest pusty</div>
-	<div>
-		<a th:href="@{/index}">ok</a>
+	<div id="koszykjestpusty">
+		<h2>Twój koszyk jest pusty</h2>
 	</div>
+	<a th:href="@{/index}">
+		<div id="ok">ok</div>
+	</a>
 </body>
 </html>
