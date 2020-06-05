@@ -619,3 +619,23 @@ ul > li
 	color: white;
 	text-transform: uppercase;
 }
+
+#newstile
+{
+	width: 1800px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 50px;
+}
+
+#opistile
+{
+	margin-top: 50px;
+	border: dashed;
+	border-color: #eedc3a;
+	border-top-right-radius: 30px;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	padding: 20px;
+}
