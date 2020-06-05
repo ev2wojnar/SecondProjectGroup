@@ -7,17 +7,25 @@
     
 	<title>Przyjscie do podsumowania z wybranym miejscem</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<div th:text="${podsumowanie2}"/>
-	<div>*znaczek biletu*</div>
-	<div>Podsumowanie specyfikacji biletu bez rezerwacji</div>
-	<div>+ 5 zł za zarezerwowane miejsce</div>
-	<div>
-		<a th:href="@{/cinemas/ticketSpecification}">wróć do wyboru biletu</a>
+    <div th:text="${podsumowanie2}"/>
+	<div class="podsumowanie">
+		<h2>Podsumowanie specyfikacji biletu z rezerwacją</h2>
 	</div>
-	<div>
-		<a th:href="@{/reservation/payment}">zapłać</a>
+	<div id="dodatekzarezerwacje">+ 5 zł za zarezerwowane miejsce</div>
+	<div class="zaplactile">
+		<a th:href="@{/cinemas/ticketSpecification}">
+			<div class="powrot">wróć do wyboru biletu</div>
+		</a>
+		<a th:href="@{/reservation/payment}">
+			<div class="zaplac">
+				<h3>zapłać</h3>
+			</div>
+		</a>
 	</div>
 </body>
 </html>

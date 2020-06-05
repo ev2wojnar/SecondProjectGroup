@@ -7,37 +7,55 @@
     
 	<title>Sale</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div th:text="${happyHours}"/>
-	<div>
-	   <div>
-			<a th:href="@{/index}">Kino X</a>
-		</div>
-		<ul>
+    <div id="header">
+        <a th:href="@{/index}" class="linkwhite">
+            <div id="kinoxtile">
+                <h3>Kino X</h3>
+            </div>
+        </a>
+		<ul id="menulist">
 			<li>
 				<a th:href="@{/news}">Aktualności</a>
 			</li>
 			<li>
-				<a th:href="@{/chooseCity}">Repertuar</a>
+				<a th:href="@{chooseCity}" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a th:href="@{/priceList}">Cennik</a>
+				<a th:href="@{/priceList}" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a th:href="@{/happyHours}">Promocje</a>
+				<a th:href="@{/happyHours}" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<div>
-			<a th:href="@{/bucket}">Koszyk</a>
-		</div>
+        <a th:href="@{/bucket}">
+            <div id="baskettile">
+                <h3>Koszyk</h3>
+            </div>
+        </a>
+        <div style="clear: both;"></div>
 	</div>
-	<div>-20% na wszystkie bilety</div>
-	<div>*przerywana linia*</div>
-	<div>happy hours</div>
-	<div>*znaczek słońca*</div>
-	<div>11:00 - 15:00</div>
-	<div>*przerywana linia*</div>
-	<div>od wtorku - do piątku</div>
+<div id="przecena">
+    <h2>-20% na wszystkie bilety</h2>
+</div>
+<div class="pasek"></div>
+<div id="happyhourstile">
+    <div id="happyhours">
+        <h2>happy hours</h2>
+    </div>
+    <div id="godzinyhh">
+        <h2>11:00 - 15:00</h2>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+<div class="pasek"></div>
+<div id="odwtorkudopiatku">
+    <h2>od wtorku - do piątku</h2>
+</div>
 </body>
 </html>
