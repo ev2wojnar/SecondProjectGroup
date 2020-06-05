@@ -19,8 +19,7 @@ public class Cinema {
     @Embedded
     private Address address;
 
-    public Cinema(String name, Address address) {
-        this.name = name;
+    public Cinema(Address address) {
         this.address = address;
     }
 

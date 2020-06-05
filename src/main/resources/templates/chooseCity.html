@@ -3,49 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-	
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
     <title>Choose city</title>
-	<link rel="stylesheet" href="style.css" type="text/css" />
-	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
 <div th:text="${selectedCity}"/>
-    <div id="wybierzmiasto">
-		<h2>Wybierz miasto</h2>
-	</div>
-	<div>
-		<ol id="citylist">
-			<li>
-				<a th:href="@{/movies/movies}" class="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" class="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-			<li>
-				<a th:href="@{/movies/movies}" id="cityitemlink">Nazwa miasta</a>
-			</li>
-		</ol>
-	</div>
+<div id="wybierzmiasto">
+    <h2>Wybierz miasto</h2>
+</div>
+<div>
+    <ol id="citylist">
+        <li>
+            <a th:href="@{/movies/movies}" class="cityitemlink">Wroclaw</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" class="cityitemlink">Zabrze</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Szczecin</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Krakow</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Torun</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Poznan</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Gdansk</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Warszawa</a>
+        </li>
+        <li>
+            <a th:href="@{/movies/movies}" id="cityitemlink">Rzeszow</a>
+        </li>
+    </ol>
+</div>
 </body>
 </html>

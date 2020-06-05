@@ -96,10 +96,16 @@ public class SecondGroupProjectApplication {
 
         //-----------------------------//
 
-        Cinema kinoX = new Cinema("Kino X", new Address("Wrocław", "Pawianicka", "34", "21-370"));
-        Cinema kinoY = new Cinema("Kino Y", new Address("Zabrze", "Bąbelkowa", "108", "79-654"));
-        cinemaRepository.save(kinoX);
-        cinemaRepository.save(kinoY);
+        Cinema kinoX = new Cinema( new Address("Wrocław", "Latawcowa", "34", "21-370"));
+        Cinema kinoY = new Cinema(new Address("Zabrze", "Bąbelkowa", "108", "79-654"));
+        Cinema kinoZ = new Cinema(new Address("Szczecin", "Techniczna", "90", "98-345"));
+        Cinema kinoW = new Cinema(new Address("Krakow", "Pomaranczowa", "26", "01-986"));
+        Cinema kinoR = new Cinema(new Address("Torun", "Chmurna", "160", "09-343"));
+        Cinema kinoO = new Cinema(new Address("Poznan", "Kokosowa", "88", "89-652"));
+        Cinema kinoA = new Cinema(new Address("Gdansk", "Rastrowa", "36", "01-112"));
+        Cinema kinoB = new Cinema(new Address("Warszawa", "Topolowa", "75", "74-300"));
+        Cinema kinoT = new Cinema(new Address("Rzeszow", "Wierzbowa", "12", "56-908"));
+        cinemaRepository.saveAll(asList(new Cinema[]{kinoX, kinoY, kinoZ, kinoW, kinoT, kinoR, kinoO, kinoB, kinoA}));
         //----------------------------//
 
         Customer jeff = new Customer("My name's Jeff", "Hello");

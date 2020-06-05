@@ -12,7 +12,7 @@
 	
 </head>
 <body>
-<a th:text="'lowIQsession ' + ${ticketSpecification}"/>
+<div th:text="${ticketSpecification}"/>
    <div id="header">
 	   <a th:href="@{/index}" class="linkwhite">
 			<div id="kinoxtile">
@@ -24,7 +24,7 @@
 				<a th:href="@{/index}" class="menulink">Aktualności</a>
 			</li>
 			<li>
-				<a th:href="@{chooseCity}" class="menulink">Repertuar</a>
+				<a th:href="@{/chooseCity}" class="menulink">Repertuar</a>
 			</li>
 			<li>
 				<a th:href="@{/priceList}" class="menulink">Cennik</a>
@@ -80,7 +80,7 @@
 		<div id="rezerwacjaleft">
 			<p>Nie, miejsce wybiorę przy odbiorze</p>
 			<div class="podsumowanietile">
-				<a href="summary1.html" class="podsumowanielink">
+				<a th:href="@{/reservation/podsumowanieBezWyboruMiejsca}" class="podsumowanielink">
 					<h3>Przejdź do podsumowania</h3>
 				</a>
 			</div>
@@ -88,7 +88,7 @@
 		<div id="rezerwacjaright">
 			<p>Tak, przejdź do wyboru miejsca</p>
 			<div class="podsumowanietile">
-				<a href="choosingPlace.html" class="podsumowanielink">
+				<a th:href="@{/seats/seats}" class="podsumowanielink">
 					<h3>Przejdź do wyboru miejsca</h3>
 				</a>
 			</div>
