@@ -24,4 +24,15 @@ public class MovieController {
         return "movieScreen";
     }
 
+    @GetMapping()
+    public Iterable<Movie> findMovies(){
+        return movieService.findAllMovies();
+    }
+
+    @GetMapping("/movies")
+    public String getAllMovies(Model model) {
+        model.addAttribute("movies", findMovies());
+        return "cinemaRepertoire";
+    }
+
 }

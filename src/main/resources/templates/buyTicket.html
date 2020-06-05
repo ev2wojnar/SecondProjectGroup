@@ -5,37 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     
-	<title>Movie screen</title>
+	<title>Buy ticket</title>
+	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
 	
 </head>
 <body>
 <a th:text="'lowIQsession ' + ${ticketSpecification}"/>
-   <div>
-	   <div>
-			<a th:href="@{/index}">Kino X</a>
-		</div>
-		<ul>
+   <div id="header">
+	   <a th:href="@{/index}" class="linkwhite">
+			<div id="kinoxtile">
+				<h3>Kino X</h3>
+			</div>
+		</a>
+		<ul id="menulist">
 			<li>
-				<a th:href="@{/index}">Aktualności</a>
+				<a th:href="@{/index}" class="menulink">Aktualności</a>
 			</li>
 			<li>
-				<a th:href="@{/chooseCity}">Repertuar</a>
+				<a th:href="@{chooseCity}" class="menulink">Repertuar</a>
 			</li>
 			<li>
-				<a th:href="@{/priceList}">Cennik</a>
+				<a th:href="@{/priceList}" class="menulink">Cennik</a>
 			</li>
 			<li>
-				<a th:href="@{/happyHours}">Promocje</a>
+				<a th:href="@{/happyHours}" class="menulink">Promocje</a>
 			</li>
 		</ul>
-		<div>
-			<a th:href="@{/bucket}">Koszyk</a>
-		</div>
+		<a th:href="@{/bucket}">
+			<div id="baskettile">
+				<h3>Koszyk</h3>
+			</div>
+		</a>
+		<div style="clear: both;"></div>
 	</div>
-	<div>*strzałka*Film: *Nazwa filmu*</div>
+	<div class="title">
+		<h2>Film: *Nazwa filmu*</h2>
+	</div>
 	<div>
-		*strzałka*Wybierz dzień
-			<form action="" method="post">
+		<h2 class="title">Wybierz dzień</h2>
+			<form action="" method="post" class="checkinglist">
 				<div><label><input type="radio" name="dzien">Poniedziałek</label></div>
 				<div><label><input type="radio" name="dzien">Wtorek</label></div>
 				<div><label><input type="radio" name="dzien">Środa</label></div>
@@ -46,15 +56,15 @@
 			</form>
 	</div>
 	<div>
-		*strzałka*Wybierz seans
-			<form action="" method="post">
+		<h2 class="title">Wybierz seans</h2>
+			<form action="" method="post" class="checkinglist">
 				<div><label><input type="radio" name="seans">2D</label></div>
 				<div><label><input type="radio" name="seans">3D</label></div>
 			</form>
 	</div>
 	<div>
-		*strzałka*Wybierz godzinę
-			<form action="" method="post">
+		<h2 class="title">Wybierz godzinę</h2>
+			<form action="" method="post" class="checkinglist">
 				<div><label><input type="radio" name="godzina">11:15 (SALA1)</label></div>
 				<div><label><input type="radio" name="godzina">13:30 (SALA5)</label></div>
 				<div><label><input type="radio" name="godzina">15:15 (SALA8)</label></div>
@@ -63,17 +73,25 @@
 				<div><label><input type="radio" name="godzina">21:15 (SALA7)</label></div>
 			</form>
 	</div>
-	<div>*strzałka*Czy chcesz zarezerwować miejsce?</div>
-	<div>
-		<div>Nie, miejsce wybiorę przy odbiorze</div>
-		<div>
-			<a href="summary1.html">Przejdź do podsmowania</a>
-		</div>
+	<div class="title">
+		<h2>Czy chcesz zarezerwować miejsce?</h2>
 	</div>
-	<div>
-		<div>Tak, przejdź do wyboru miejsca</div>
-		<div>
-			<a href="choosingPlace.html">Przejdź do wyboru miejsca</a>
+	<div id="rezerwacjatile">
+		<div id="rezerwacjaleft">
+			<p>Nie, miejsce wybiorę przy odbiorze</p>
+			<div class="podsumowanietile">
+				<a href="summary1.html" class="podsumowanielink">
+					<h3>Przejdź do podsumowania</h3>
+				</a>
+			</div>
+		</div>
+		<div id="rezerwacjaright">
+			<p>Tak, przejdź do wyboru miejsca</p>
+			<div class="podsumowanietile">
+				<a href="choosingPlace.html" class="podsumowanielink">
+					<h3>Przejdź do wyboru miejsca</h3>
+				</a>
+			</div>
 		</div>
 	</div>
 </body>
