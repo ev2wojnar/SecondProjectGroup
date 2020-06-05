@@ -7,54 +7,59 @@
 
     <title>Rozkad miejsc</title>
 
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+
 </head>
 <body>
 <div th:text="${choosingPlace}"/>
-<div>ekran</div>
-<div>
-    <img src="miejsca w kinie"/>
-</div>
-<form action="" method="post">
-    <label for="rzad">Numer rzędu</label>
-    <select id="rzad">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-        <option>13</option>
-        <option>14</option>
-        <option>15</option>
-        <option>16</option>
-    </select>
-    <label for="miejsce">Numer miejsca</label>
-    <select id="miejsce">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-        <option>6</option>
-        <option>7</option>
-        <option>8</option>
-        <option>9</option>
-        <option>10</option>
-        <option>11</option>
-        <option>12</option>
-        <option>13</option>
-        <option>14</option>
-        <option>15</option>
-    </select>
-</form>
-<div>
-    <a th:href="@{/reservation/podsumowanieZWyboremMiejsca}">Przejdź do podsumowania</a>
-</div>
+	<div id="ekran">
+		<h2>ekran</h2>
+	</div>
+	<img src="img/miejsca.png" id="obrazekmiejsc"/>
+	<div id="wybieraniemiejscatile">
+		<form action="" method="post">
+			<label for="rzad">Numer rzędu</label>
+				<select id="rzad">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+					<option>16</option>
+				</select>
+			<label for="miejsce">Numer miejsca</label>
+				<select id="miejsce">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>9</option>
+					<option>10</option>
+					<option>11</option>
+					<option>12</option>
+					<option>13</option>
+					<option>14</option>
+					<option>15</option>
+				</select>
+		</form>
+	</div>
+	<a th:href="@{/reservation/podsumowanieZWyboremMiejsca}">
+		<div id="przejdzdosummary">Przejdź do podsumowania</div>
+	</a>
 </body>
 </html>

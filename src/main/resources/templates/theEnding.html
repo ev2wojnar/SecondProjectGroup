@@ -7,13 +7,17 @@
     
 	<title>Podsumowanie</title>
 	
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<div th:text="${payment}"/>
-	<div>*znaczek biletu*</div>
-	<div>Bilet został pomyślnie zakupiony!</div>
-	<div>
-		<a th:href="@{/index}">wróć do menu</a>
+    <div th:text="${payment}"/>
+	<div id="ending">
+		<h2>Bilet został pomyślnie zakupiony!</h2>
 	</div>
+	<a th:href="@{/index}">
+		<div id="powrotdomenu">Wróć do menu</div>
+	</a>
 </body>
 </html>
