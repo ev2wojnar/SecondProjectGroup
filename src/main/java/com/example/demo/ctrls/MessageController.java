@@ -66,4 +66,9 @@ public class MessageController {
 //    @GetMapping("/movieDescription")
 //    public String movieDesc(@RequestParam(name = "name3", required = false, defaultValue = ))
 
+    @GetMapping("/news")
+    public String news(@RequestParam(name = "news", required = false)String name, Model model){
+        return "news";
+    }
+
 }
