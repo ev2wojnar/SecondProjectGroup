@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -30,7 +28,10 @@ public class Movie implements Serializable {
     private String staff;
     private int duration;
     private double ticketPrice;
-//    @OneToMany(fetch = FetchType.LAZY, mappedBy = "seance")
+    //@Lob
+    //@Column(name = "MAIN_PHOTO")
+    //private byte[] mainPhoto;
+//    @OneToMany
 //    private List<Seance> seanceList = new ArrayList<>();
 
     public Movie(String title, String description, MovieGenre movieGenre, LocalDate releaseDate,
@@ -45,5 +46,6 @@ public class Movie implements Serializable {
         this.staff = staff;
         this.duration = duration;
         this.ticketPrice = ticketPrice;
+
     }
 }

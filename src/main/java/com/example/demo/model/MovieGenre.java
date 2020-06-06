@@ -5,22 +5,22 @@ import java.util.Map;
 
 public enum MovieGenre {
     ADVENTURE("ADVENTURE", "Przygoda"),
-    ACTION("ACTION", "Akcja"),
+    ACTION("ACTION", "Film Akcji"),
     COMEDY("COMEDY", "Komedia"),
     CRIME("Crime", "Kryminał"),
     DRAMA("Drama", "Dramat"),
     FANTASY("Fantasy", "Fantazy"),
-    HISTORICAL("Hist", "Hist"),
+    HISTORICAL("Hist", "Film historyczny"),
     HORROR("Horroe", "Horror"),
-    PSYCHOLOGICAL_THRILLER("PSYCHOLOGICAL_THRILLER", ""),
-    ROMANCE("ROMANCE", ""),
-    SCIENCE_FICTION("SCIENCE_FICTION", ""),
-    THRILLER("THRILLER", ""),
-    WESTERN("WESTERN", ""),
-    ANIMATION("ANIMATION", ""),
-    FAMILY("FAMILY", ""),
-    MUSIC("MUSIC", ""),
-    BIOGRAPHY("BIOGRAPHY", "");
+    PSYCHOLOGICAL_THRILLER("PSYCHOLOGICAL_THRILLER", "Thriller psychologiczny"),
+    ROMANCE("ROMANCE", "Romans"),
+    SCIENCE_FICTION("SCIENCE_FICTION", "Science fiction"),
+    THRILLER("THRILLER", "Thriller"),
+    WESTERN("WESTERN", "Western"),
+    ANIMATION("ANIMATION", "Animacja"),
+    FAMILY("FAMILY", "Rodzinny"),
+    MUSIC("MUSIC", "Musical"),
+    BIOGRAPHY("BIOGRAPHY", "Biograficzny");
 
     private final Map<String, String> localName;
 
