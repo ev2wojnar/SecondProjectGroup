@@ -7,11 +7,15 @@
     
 	<title>Buy ticket</title>
 	
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" th:href="@{/css/style.css}" type="text/css" />
 	<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap" rel="stylesheet">
 	
 </head>
 <body>
+<div>
+<img th:src="@{/img/howToTrainYourDragon.jpg}" alt="memorynotfound logo"/>
+</div>
+
 <div th:text="${ticketSpecification}"/>
    <div id="header">
 	   <a th:href="@{/index}" class="linkwhite">
